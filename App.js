@@ -28,8 +28,14 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 
+import { NativeModules } from 'react-native';
+
 
 const App: () => Node = () => {
+
+
+
+  const { OpenScreenActivity } = NativeModules;
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -38,7 +44,10 @@ const App: () => Node = () => {
 
   const onPressNavigateToAndroid = () => {
     console.log('onPressNavigateToAndroid');
+    OpenScreenActivity.createCalendarEvent('testName', 'testLocation');
   };
+
+
 
   return (
     <SafeAreaView style={backgroundStyle}>

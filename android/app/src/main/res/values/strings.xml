@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">rn_native_android</string>
+    <string name="read_error">読み込めませんでした</string>
+    <string name="support_error">対応していません</string>
 </resources>
